@@ -4,7 +4,7 @@ import 'cypress-plugin-stripe-elements';
 
 describe('Cypress basics', () => {
   beforeEach(() => {
-      cy.visit('https://checkoutdev.queimadiaria.com/checkout/1')
+      cy.visit('https://checkoutdev.queimadiaria.com/checkout/131')
   })
 
   //context('Actions', () => {
