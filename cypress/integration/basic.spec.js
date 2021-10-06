@@ -17,7 +17,7 @@ describe('Cypress basics', () => {
         cy.get('body').should('contain', 'Seguro')
     })
         // Preenchendo os campos iniciais.
-    it.only('TextFields', () => {
+     it.only('TextFields', () => {
 
         
         cy.get('#name').type('Elaine');
@@ -25,8 +25,8 @@ describe('Cypress basics', () => {
         cy.get('#phone').type('11999887766');
         cy.get('#document').type('17787842598'); //shift alt A*/
 
-
-        // Preenchendo o número cartão de crédito ///
+ 
+       // Preenchendo o número cartão de crédito ///
         cy.get('[title="Iframe para número de cartão seguro"]').then(iframe => {
             const body = iframe.contents().find('body')
             cy.wrap(body).find('#encryptedCardNumber')
@@ -54,15 +54,30 @@ describe('Cypress basics', () => {
         //Opções de pagamento
 
        // Obs: Só precisa trocar o select e o value para mudar a seleção das parcelas
-       
-     /* cy.get('select').select('11')
-          .should('have.value', '11') */
+
+        cy.get('select').select('11')
+          .should('have.value', '11') 
               
         
-   // Clicando no botão Comprar agora
-       // cy.get('.css-wvao32').click();
-      //    );                    
+        // Clicando no botão Comprar agora
+        cy.get('.css-wvao32')
+          .click();
+         
+      
+        //Definição de Senha
+        //Login
+        cy.get('#field-1')
+          .type('12345')
 
-    })
+        //Senha    
+        cy.get('#field-2')
+        .type('12345')
+        
+        // Botão Criar senha e entrar 
+        cy.get('.chakra-button')
+        .click();
+     
+
+ })
 
 })
