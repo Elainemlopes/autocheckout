@@ -1,1 +1,8 @@
-{"chromeWebSecurity": false}
+{
+    "viewportWidth": 1366,
+    "viewportHeight": 768,
+    "defaultCommandTimeout": 30000,
+    "chromeWebSecurity": false,
+    "testfiles": "**/*.feature",
+    "baseUrl": "https://dev.queimadiaria.com//"
+}
